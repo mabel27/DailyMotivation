@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "blowbrush";
+  src: url("/fonts/blowbrush.otf");
+  src: url("./fonts/blowbrush.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  font-weight: normal;
+  font-family: 'blowbrush';
+  font-color: 'red';
+  font-size: 10em;
+}
