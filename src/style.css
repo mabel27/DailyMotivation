@@ -63,6 +63,7 @@
 
  li {
  	text-align: center;
+  padding-top: 3em;
  }
 
   .start {
@@ -71,7 +72,7 @@
   	font-weight: bold;
   	letter-spacing: 8px;
   	color: #fe9b00 !important;
-  	font-size: 4em;
+  	font-size: 5em;
   	text-decoration: none;
   	
   }
@@ -79,7 +80,7 @@
   .start:hover {
 
 	color: #FFFFFF !important;
-	font-size: 4.5em;
+	font-size: 5.5em;
 	text-decoration: none;
 
   }
@@ -103,16 +104,12 @@
 
 }
 
-
-
-
 .header1 {
   font-weight: normal;
   font-family: 'blowbrush';
   color: #FFFFFF ;
   font-size: 1em;
   letter-spacing: 5px;
-  float: right;
   margin-top: 0;
 }
 
