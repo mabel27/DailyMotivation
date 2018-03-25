@@ -1,39 +1,21 @@
 import React from 'react';
-import Favorite from './Favorite';
 import {Col} from 'react-bootstrap';
-import Quotes from './Quotes';
-import sampleQuotes from '../sampleQuotes';
+import {getDate} from '../helpers';
 
 class Welcome extends React.Component {
+  render ()
+  {
+  return (
 
-  state = {
-    quotes: {},
-  } 
+    <Col md={12} sm={6} >
+          <div className="welcomeHeader">
+             <h1><span className="capitalLetter">BE</span>Lieve in <span className="capitalLetter">YOU</span>rself.</h1>
+             <h2 className="todayDate">{this.props.tagline} {getDate()} </h2>
+          </div>
+    </Col>
+);
 
-  loadSampleQuotes = () => {
-
-    this.setState({quotes: sampleQuotes});
-  }
-
-  render() {
-    return (
-    	<Col md={12} sm={6} >
-    		<div className="myBackgroundWelcome" >
-    			<div className="welcomeHeader">
-    			<h1>
-    			>Go Do What you were Created to Do! 
-    			</h1>
-    			</div>
-    			<Favorite />
-          <ul>
-          {Object.keys(this.state.quotes).map(key =>
-            <Quotes key={key} details = {this.state.quotes[key]} />
-          )}
-          </ul>
-    		</div>
-       </Col>
-    );
-  }
 }
-
+}
+  
 export default Welcome;

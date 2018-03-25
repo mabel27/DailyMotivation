@@ -18,6 +18,11 @@
   src: url("./fonts/Painting_With_Chocolate.ttf");
 }
 
+@font-face {
+  font-family: "Codystart-Regular";
+  src: url("./fonts/Codystar-Regular.ttf");
+}
+
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
@@ -34,18 +39,27 @@
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   color: #fe9b00;
   border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
+ /*  white-space: nowrap; Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
-  font-family: 'Painting_With_Chocolate';
+  font-family: 'Codystart-Regular';
   font-size: 3.5em;
+  text-align: center;
+  padding-top: 1em;
   animation: 
-    typing 8s steps(31, end),
-    blink-caret 1s step-end infinite;
+    typing 7s steps(21, end),
+    blink-caret 1s step-end ;
+}
+
+.capitalLetter {
+
+   font-family: 'Painting_With_Chocolate';
+   font-weight: bold;
+   text-align: center;
 }
 
 .myBackground {
-    background: linear-gradient(to top, #02171E,#2d0523);
+    background: linear-gradient(to top, #074e67,  #90126f);
     text-align: center;
     height: 1600px;
 }
@@ -55,15 +69,41 @@
   font-weight: normal;
   font-family: 'BamsGlitchV2Demo-Regular';
   color: #FFFFFF ;
-  font-size: 6em;
-  letter-spacing: 3px;
+  font-size: 50px;
+  letter-spacing: 2px;
   text-align: center;
   margin-top: 0;
 }
 
- li {
- 	text-align: center;
-  padding-top: 3em;
+.postIt li{
+  list-style:none;
+}
+.postIt{
+  overflow:hidden;
+}
+.postIt li {
+  text-decoration:none;
+  color:#000;
+  display:block;
+  height:10em;
+  width:10em;
+  padding:1em;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+.postIt li{
+  margin:1em;
+  float:left;
+}
+
+
+ .liStart {
+ 
+  padding-top: 4em;
  }
 
   .start {
@@ -71,8 +111,8 @@
   	font-family: 'Painting_With_Chocolate';
   	font-weight: bold;
   	letter-spacing: 8px;
-  	color: #fe9b00 !important;
-  	font-size: 5em;
+  	color: #dd9933 !important;
+  	font-size: 36px;
   	text-decoration: none;
   	
   }
@@ -80,56 +120,112 @@
   .start:hover {
 
 	color: #FFFFFF !important;
-	font-size: 5.5em;
+	font-size: 42px;
 	text-decoration: none;
 
   }
 
+.mySubmit{
+
+  text-align: center;
+  color: #90126f ;
+  background: #052d72;
+  border-color: #052d72;
+  font-size: 2em;
+
+}
+
+.mySubmit:hover {
+
+  background: #dd9933;
+  border-color: #dd9933;
+  font-size: 2em;
+  text-transform: uppercase;
+
+}
+
+      
+
+  .quoteOfTheDay {
+
+    font-family: 'Codystart-Regular';
+    color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+    font-size: 24px;
+
+  }
+
 .myBackgroundWelcome {
-    background: linear-gradient(to top, #2d0523, #02171E);
-    text-align: center;
+    background: linear-gradient(to top, #2d0523,  #052d72);
     height: 1600px;
 }
 
 .favorite {
 
   font-weight: normal;
-  font-family: 'blowbrush';
-  color: #FFFFFF ;
-  font-size: 2em;
+  font-family: 'Painting_With_Chocolate';
+  color:  #FFF ;
   letter-spacing: 2px;
   margin-top: 0;
-  text-align: left;
-  padding-top: 1em;
-
+  text-align: center;
 }
 
-.header1 {
-  font-weight: normal;
-  font-family: 'blowbrush';
-  color: #FFFFFF ;
-  font-size: 1em;
-  letter-spacing: 5px;
+
+  .todayDate {
+
+  font-weight: bold;
+  font-family: 'BamsGlitchV2Demo-Regular';
+  color:  #FFFFFF ;
   margin-top: 0;
+  letter-spacing: 2px;
+  text-align: right;
+  padding-bottom: 1em;
+  }
+
+
+.myForm {
+
+  color: #FFFFFF;
+  font-family: 'Painting_With_Chocolate';
+  color:  #90126f ;
+  letter-spacing: 2px;
+}
+
+
+.paper {
+  box-shadow:
+    /* The top layer shadow */
+    0 1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 10px 0 -5px ,
+    /* The second layer shadow */
+    0 10px 1px -4px rgba(0,0,0,0.15),
+     /* The third layer */
+    0 20px 0 -10px ,
+    /* The third layer shadow */
+    0 20px 1px -9px rgba(0,0,0,0.15);
+    /* Padding for demo purposes */
+    padding: 30px;
 }
 
 .e {
   font-weight: normal;
   font-family: 'BamsGlitchV2Demo-Regular';
-  color: #fe9b00 ;
+  color:  #dd9933 ;
   font-size: 2em;
   margin-top: 0;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 .p {
 
-  font-weight: normal;
+  font-weight: bold;
   font-family: 'BamsGlitchV2Demo-Regular';
-  color: #fe9b00 ;
+  color:  #dd9933 ;
   font-size: 1.5em;
   margin-top: 0;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
  .demo7-ball {
@@ -159,17 +255,3 @@
   	background-size: cover;
   }
 
-
-
-  .startMobile {
-
-  	font-weight: normal;
-  	font-family: 'Painting_With_Chocolate';
-  	font-weight: bold;
-  	letter-spacing: 5px;
-  	color: #fe9b00;
-  	font-size: 2em;
-  	padding-top: 1em;
-  	color: #fe9b00 !important;
-  	text-decoration: none;
-  }
