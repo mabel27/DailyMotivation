@@ -7,7 +7,7 @@ class Welcome extends React.Component {
   {
   return (
 
-    <Col md={12} sm={6} >
+    <Col md={12} >
           <div className="welcomeHeader">
              <h1><span className="capitalLetter">BE</span>Lieve in <span className="capitalLetter">YOU</span>rself.</h1>
              <h2 className="todayDate">{this.props.tagline} {getDate()} </h2>

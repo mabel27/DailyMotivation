@@ -31,19 +31,17 @@ class App extends React.Component {
     return (
 
     	<Col md={12}>
-    	<div className="myBackgroundWelcome" >
-    	<Welcome tagline="Today Is" />
-    	<Col md={12}>
-    	<Col md={8}>
-    	<Row>
-    	{Object.keys(data).map(key => <Information key={key} data={data[key]}/> )}
-    	</Row>
-    	</Col>
-      <Col md={4}>
-      <AddInformation AddInformation={this.AddInformation}  />
-      </Col>
-    	</Col>
-		</div>
+      	<Welcome tagline="Today Is" />
+      	<Col md={12}>
+          	<Col md={8}>
+          	<Row>
+          	{Object.keys(data).map(key => <Information key={key} data={data[key]}/> )}
+          	</Row>
+          	</Col>
+            <Col md={4}>
+            <AddInformation AddInformation={this.AddInformation}  />
+            </Col>
+      	</Col>
 		</Col>
     );
   }

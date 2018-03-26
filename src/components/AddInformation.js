@@ -1,8 +1,9 @@
 import React from 'react';
-import {FormControl, FormGroup, Button, Form, ControlLabel} from 'react-bootstrap';
+import {FormControl, FormGroup, Button, Form, ControlLabel, Col} from 'react-bootstrap';
 
 class AddInformation extends React.Component {
 
+/*
 
   nameRef = React.createRef();
   imageRef = React.createRef();
@@ -24,8 +25,11 @@ class AddInformation extends React.Component {
 
   };
 
+  */
+
 	render (){
 		return(
+      <Col md={12}>
 		 <Form horizontal className="myForm" onSubmit={this.addInfo}>
 		  <p className="addInfo"><span className="p">W</span>hat inspired you today<span className="p">?</span></p>
   			<FormGroup  bssize="small" >
@@ -57,6 +61,7 @@ class AddInformation extends React.Component {
       			<Button className="mySubmit" type="submit">Add new info</Button>
   			</FormGroup>
   	</Form>
+    </Col>
 		);
 	}
 }

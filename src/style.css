@@ -57,22 +57,11 @@
    text-align: center;
 }
 
-.myBackground {
-    background: #8A0EFC;
-    text-align: center;
-    height: 1600px;
-}
-
-.myBackgroundWelcome {
-    background: #FFF;
-    height: 1600px;
-}
-
 .header {
   font-weight: normal;
   font-family: 'BamsGlitchV2Demo-Regular';
-  color: #FFFFFF ;
-  font-size: 64px;
+  color: grey ;
+  font-size: 74px;
   letter-spacing: 2px;
   text-align: center;
   margin-top: 0;
@@ -96,16 +85,17 @@
     font-family: 'Painting_With_Chocolate';
     font-weight: bold;
     letter-spacing: 8px;
-    color: #FFC900 !important;
-    font-size: 36px;
+    color: #8A0EFC !important;
+    font-size: 42px;
     text-decoration: none;
+    text-align: center;
     
   }
 
   .start:hover {
 
-  color: #FFFFFF !important;
-  font-size: 42px;
+  color: #361BFC !important;
+  font-size: 46px;
   text-decoration: none;
 
   }
@@ -121,6 +111,10 @@
   padding-bottom: 1em;
   }
 
+ ul {
+
+  text-align: center;
+ }
 
  .liStart {
  
@@ -130,17 +124,18 @@
   .quoteOfTheDay {
 
     font-family: 'Codystart-Regular';
-    color: #FFFFFF;
+    color: #361BFC;
     font-weight: bold;
     letter-spacing: 0.5em;
     font-size: 24px;
+    text-align: center
 
   }
 
 .addInfo {
 
   font-weight: bold;
-  font-family: 'Painting_With_Chocolate';
+  font-family: 'Codystart-Regular';
   color: #361BFC ;
   background: #C4BCFF;
   letter-spacing: 2px;
@@ -150,16 +145,16 @@
 
 .editInfo {
 
-  font-family: 'BamsGlitchV2Demo-Regular';
-  color:  #9E33FF;
+  font-family: 'Codystart-Regular';
+  color:  grey;
   letter-spacing: 2px;
   margin-top: 0;
+  font-weight: bold;
   text-align: center;
 }
 .myForm {
 
   color: grey;
-  font-family: 'Painting_With_Chocolate';
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -173,7 +168,7 @@
   font-size: 1em;
   font-weight: bold;
   letter-spacing: 3px;
-  font-family: 'Painting_With_Chocolate';
+  font-family: 'Codystart-Regular';
   text-transform: uppercase;
 }
 
@@ -186,7 +181,8 @@
 }
 
 .box {
-  min-height: 320px;
+  min-height: 360px;
+  padding-top: 1em;
 }
 
 .boxHeader {
