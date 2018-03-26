@@ -20,8 +20,10 @@ export function getQuote() {
     "LOVE never gives up",
     "Cree en ti", 
     "Life is Amazing",
-    "I always follow my Heart's path \u1F493';",
-    "Lo real es lo Presente"
+    "I always follow my Heart's path",
+    "Lo real es lo Presente",
+    "How much you truly believe in something can be manifested only through what you are willing to risk for it.",
+    "Don’t be afraid to give up the good and go for the great.",
   ];
 
 
