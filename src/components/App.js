@@ -2,17 +2,20 @@ import React from 'react';
 import {Col} from 'react-bootstrap';
 import Welcome from './Welcome';
 import AddInformation from './AddInformation';
-import Favorite from './Favorite';
+import Information from './Information';
+import data from '../sampleData';
 
 
 class App extends React.Component {
 
 	state = {
 
-  		data : {},
+  		data_ : {},
   	}
 
   render() {
+
+  	//const {data} = this.getData();
     return (
 
     	<Col md={12}>
@@ -20,7 +23,11 @@ class App extends React.Component {
     	<Welcome tagline="Today Is" />
     	<Col md={12}>
     	<AddInformation/>
-    	<Favorite />
+    	<Col md={6}>
+    	<ul>
+    	{Object.keys(data).map(key => <Information key={key} data={data[key]}/> )}
+    	</ul>
+    	</Col>
     	</Col>
 		</div>
 		</Col>
