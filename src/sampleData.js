@@ -1,6 +1,7 @@
 // TODO Add ID to each one
 const data = [
 	{
+		id: 1,
 		name: "Colorful Fruits",
 		image: "/images/fruits.JPG",
 		type: "Picture",
@@ -9,6 +10,7 @@ const data = [
 	},
 
 	{
+		id: 2,
 		name: "Positive vibes",
 		image: "/images/authenticity.jpg",
 		type: "Picture",
@@ -16,6 +18,7 @@ const data = [
 	},
 
 	{
+		id: 3,
 		name: "Orlando Florida",
 		image: "/images/park.JPG",
 		Type: "Picture",
@@ -23,6 +26,7 @@ const data = [
 	},
 
 	{
+		id: 4,
 		name: "Website effects",
 		image: "",
 		type: "Link",
@@ -30,6 +34,7 @@ const data = [
 	},
 
 	{
+		id: 5,
 		name: "Burn Calories ",
 		image: "",
 		type: "Reminder",
@@ -38,6 +43,7 @@ const data = [
 
 
 	{
+		id: 6,
 		name: "Make it Happen",
 		image: "",
 		type: "Reminder",

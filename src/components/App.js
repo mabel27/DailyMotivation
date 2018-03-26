@@ -13,6 +13,18 @@ class App extends React.Component {
   		data_ : {},
   	}
 
+    AddInformation = information => {
+    //1. Take a copy of the existing state ()
+    const data_ = {...this.state.data_};
+    //2. Add a new fish to that fishes variable
+    data_[`id${Date.now()}`] = data_;
+    //3. Set the new fishes object to state
+      this.setState({
+        data_:data_
+      });
+  };
+
+
   render() {
 
   	//const {data} = this.getData();
@@ -28,7 +40,7 @@ class App extends React.Component {
     	</Row>
     	</Col>
       <Col md={4}>
-      <AddInformation/>
+      <AddInformation AddInformation={this.AddInformation}  />
       </Col>
     	</Col>
 		</div>

@@ -70,7 +70,7 @@ class Information extends React.Component {
       				<Thumbnail className="box" src={image || 'images/park.jpg'} alt={name}>
 
         			<h3 className="boxHeader">{name} </h3>
-        			<p>{notes}</p>
+        			<p className="boxNotes">{notes}</p>
         			<p className="pBox">
         				<Button className="mySubmit" onClick={this.handleEditClick.bind(this)}>Edit</Button>
          			</p>

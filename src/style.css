@@ -191,12 +191,18 @@
 
 .boxHeader {
 
-    background: #FFC900;
-    text-align: center;
-     font-family: 'Codystart-Regular';
-     font-weight: bold;
-     font-size: 1.5em;
+  background: #FFC900;
+  text-align: center;
+  font-family: 'Codystart-Regular';
+  font-weight: bold;
+  font-size: 1.5em;
 
+}
+
+.boxNotes {
+
+  text-align: center;
+  font-weight: bold;
 }
 
 .boxHeader1 {
