@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col} from 'react-bootstrap';
+import {Col, Thumbnail, FormControl, FormGroup, Button, Form, ControlLabel} from 'react-bootstrap';
 
 class Information extends React.Component {
 
@@ -26,19 +26,56 @@ class Information extends React.Component {
 
 		if (this.state.editable) {
 			return(
-				<li>					
-					<button onClick={this.handleSaveClick.bind(this)}>Save</button>
-				</li>	
+				<Col md={3}>
+		<p className="editInfo"><span className="p">E</span>DIT<span className="p">:</span> {name}</p>
+		<Form horizontal className="myForm">
+  			<FormGroup  bssize="small" >
+    			<ControlLabel>Name</ControlLabel>
+      			<FormControl type="text" />
+  			</FormGroup>
+
+  			<FormGroup bsSize="small" >
+    			<ControlLabel>Image</ControlLabel>
+      				<FormControl type="text" />
+  			</FormGroup>
+
+  			<FormGroup bsSize="small">
+      			<ControlLabel>Type</ControlLabel>
+      				<FormControl componentClass="select" >
+      					<option value="">Select</option>
+        				<option value="picture">Picture</option>
+        				<option value="link">Link</option>
+        				<option value="reminder">Reminder</option>
+      				</FormControl>
+   			</FormGroup>
+
+   			<FormGroup cbsSize="small">
+      			<ControlLabel>Notes</ControlLabel>
+      			<FormControl componentClass="textarea" />
+    		</FormGroup>
+
+    		<p className="pBox">
+      			<Button className="mySubmit" onClick={this.handleSaveClick.bind(this)}>Save</Button>
+  			</p>
+  		</Form>
+
+		</Col>	
 				);
 		}
 		else {
 			return (
-				<li>
-					<p>{name} - <span>{type}</span></p>
-					<img src={image || 'images/park.jpg'} alt={name} />
-					<p>Notes: {notes}</p>
-					<button onClick={this.handleEditClick.bind(this)}>Edit</button>
-				</li> 
+
+				<Col md={3} >
+
+      				<Thumbnail className="box" src={image || 'images/park.jpg'} alt={name}>
+
+        			<h3 className="boxHeader">{name} </h3>
+        			<p>{notes}</p>
+        			<p className="pBox">
+        				<Button className="mySubmit" onClick={this.handleEditClick.bind(this)}>Edit</Button>
+         			</p>
+      				</Thumbnail>
+      			</Col>
 			);
 		};
 	}

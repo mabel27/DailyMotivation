@@ -1,14 +1,12 @@
 import React from 'react';
-import {Col, FormControl, FormGroup, Button, Form, ControlLabel} from 'react-bootstrap';
+import {FormControl, FormGroup, Button, Form, ControlLabel} from 'react-bootstrap';
 
 class AddInformation extends React.Component {
 
 	render (){
 		return(
-		<Col md = {4} >
-		
 		 <Form horizontal className="myForm">
-		  <h3 className="favorite"><span className="p">W</span>hat inspired you today<span className="p">?</span></h3>
+		  <p className="addInfo"><span className="p">W</span>hat inspired you today<span className="p">?</span></p>
   			<FormGroup  bssize="small" >
     			<ControlLabel>Name</ControlLabel>
       			<FormControl type="text" placeholder="Name" />
@@ -34,12 +32,10 @@ class AddInformation extends React.Component {
       			<FormControl componentClass="textarea" placeholder= "Notes" />
     		</FormGroup>
 
-    		<FormGroup bsSize="small">
+    		<FormGroup bsSize="small" className="pBox">
       			<Button className="mySubmit" type="submit">Add new info</Button>
   			</FormGroup>
   	</Form>
-		</Col>
-		
 		);
 	}
 }

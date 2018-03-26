@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col} from 'react-bootstrap';
+import {Col, Row} from 'react-bootstrap';
 import Welcome from './Welcome';
 import AddInformation from './AddInformation';
 import Information from './Information';
@@ -22,12 +22,14 @@ class App extends React.Component {
     	<div className="myBackgroundWelcome" >
     	<Welcome tagline="Today Is" />
     	<Col md={12}>
-    	<AddInformation/>
-    	<Col md={6}>
-    	<ul>
+    	<Col md={8}>
+    	<Row>
     	{Object.keys(data).map(key => <Information key={key} data={data[key]}/> )}
-    	</ul>
+    	</Row>
     	</Col>
+      <Col md={4}>
+      <AddInformation/>
+      </Col>
     	</Col>
 		</div>
 		</Col>

@@ -3,7 +3,7 @@ const data = [
 	{
 		name: "Colorful Fruits",
 		image: "/images/fruits.JPG",
-		type: "picture",
+		type: "Picture",
 		notes: "palette colors for an atractive website"
 		 
 	},
@@ -11,29 +11,37 @@ const data = [
 	{
 		name: "Positive vibes",
 		image: "/images/authenticity.jpg",
-		type: "picture",
+		type: "Picture",
 		notes: "Add to the app"
 	},
 
 	{
 		name: "Orlando Florida",
 		image: "/images/park.JPG",
-		Type: "picture",
+		Type: "Picture",
 		notes: "Do not forget to have fun"
 	},
 
 	{
 		name: "Website effects",
 		image: "",
-		type: "link",
+		type: "Link",
 		notes: "Water effects"
 	},
 
 	{
-		name: "Burn Calories \u1F525';",
+		name: "Burn Calories ",
 		image: "",
-		type: "reminder",
+		type: "Reminder",
 		notes: "Bootcamp today at 6:35PM"
+	},
+
+
+	{
+		name: "Make it Happen",
+		image: "",
+		type: "Reminder",
+		notes: "Breath"
 	},
 ];
 
