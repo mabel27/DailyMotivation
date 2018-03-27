@@ -13,6 +13,18 @@ class App extends React.Component {
   		data_ : {},
   	}
 
+
+componentDidMount() {
+
+    localStorage.setItem('data-storage', JSON.stringify(this.state.data_));
+    
+  }
+
+    componentDidUpdate(){
+
+     localStorage.setItem('data-storage', JSON.stringify(this.state.data_));
+    }
+
     AddInformation = data1_ => {
     //1. Take a copy of the existing state ()
     const data_ = {...this.state.data_};

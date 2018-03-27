@@ -27,53 +27,50 @@ class Information extends React.Component {
 		if (this.state.editable) {
 			return(
 				<Col md={3}>
-		<p className="editInfo"><span className="p">E</span>DIT<span className="p">:</span> {name}</p>
-		<Form horizontal className="myForm">
-  			<FormGroup  bssize="small" >
-    			<ControlLabel>Name</ControlLabel>
-      			<FormControl type="text" />
-  			</FormGroup>
+				<p className="editInfo"><span className="p">E</span>DIT<span className="p">:</span> {name}</p>
+				<Form horizontal className="myForm">
+		  			<FormGroup  bssize="small" >
+		    			<ControlLabel>Name</ControlLabel>
+		      			<FormControl type="text" />
+		  			</FormGroup>
 
-  			<FormGroup bsSize="small" >
-    			<ControlLabel>Image</ControlLabel>
-      				<FormControl type="text" />
-  			</FormGroup>
+		  			<FormGroup bsSize="small" >
+		    			<ControlLabel>Image</ControlLabel>
+		      				<FormControl type="text" />
+		  			</FormGroup>
 
-  			<FormGroup bsSize="small">
-      			<ControlLabel>Type</ControlLabel>
-      				<FormControl componentClass="select" >
-      					<option value="">Select</option>
-        				<option value="picture">Picture</option>
-        				<option value="link">Link</option>
-        				<option value="reminder">Reminder</option>
-      				</FormControl>
-   			</FormGroup>
+		  			<FormGroup bsSize="small">
+		      			<ControlLabel>Type</ControlLabel>
+		      				<FormControl componentClass="select" >
+		      					<option value="">Select</option>
+		        				<option value="picture">Picture</option>
+		        				<option value="link">Link</option>
+		        				<option value="reminder">Reminder</option>
+		      				</FormControl>
+		   			</FormGroup>
 
-   			<FormGroup cbsSize="small">
-      			<ControlLabel>Notes</ControlLabel>
-      			<FormControl componentClass="textarea" />
-    		</FormGroup>
+		   			<FormGroup cbsSize="small">
+		      			<ControlLabel>Notes</ControlLabel>
+		      			<FormControl componentClass="textarea" />
+		    		</FormGroup>
 
-    		<p className="pBox">
-      			<Button className="mySubmit" onClick={this.handleSaveClick.bind(this)}>Save</Button>
-  			</p>
-  		</Form>
-
-		</Col>	
+		    		<p className="pBox">
+		      			<Button className="mySubmit" onClick={this.handleSaveClick.bind(this)}>Save</Button>
+		  			</p>
+		  		</Form>
+				</Col>	
 				);
 		}
 		else {
 			return (
 
 				<Col md={3} >
-
       				<Thumbnail className="box" src={image || 'images/shape.png'} alt={name}>
-
-        			<h3 className="boxHeader">{name} </h3>
-        			<p className="boxNotes">{notes}</p>
-        			<p className="pBox">
-        				<Button className="mySubmit" onClick={this.handleEditClick.bind(this)}>Edit</Button>
-         			</p>
+	        			<h3 className="boxHeader">{name} </h3>
+	        			<p className="boxNotes">{notes}</p>
+	        			<p className="pBox">
+	        				<Button className="mySubmit" onClick={this.handleEditClick.bind(this)}>Edit</Button>
+	         			</p>
       				</Thumbnail>
       			</Col>
 			);
