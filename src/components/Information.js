@@ -67,7 +67,7 @@ class Information extends React.Component {
 
 				<Col md={3} >
 
-      				<Thumbnail className="box" src={image || 'images/park.jpg'} alt={name}>
+      				<Thumbnail className="box" src={image || 'images/shape.png'} alt={name}>
 
         			<h3 className="boxHeader">{name} </h3>
         			<p className="boxNotes">{notes}</p>
