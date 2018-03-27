@@ -3,44 +3,49 @@ import {Col, Row} from 'react-bootstrap';
 import Welcome from './Welcome';
 import AddInformation from './AddInformation';
 import Information from './Information';
-import data from '../sampleData';
+import sampleData from '../sampleData';
 
 
 class App extends React.Component {
 
 	state = {
-
-  		data_ : {},
+  		data_ : [],
   	}
-
 
   componentDidMount() {
 
-    localStorage.setItem('data-storage',this.setState({ data_: data }));
- 
+    const storageData = JSON.parse(localStorage.getItem('data-storage'));
+
+    if (storageData) {
+      this.setState({data_:storageData});
+    }else
+
+    {
+      localStorage.setItem('data-storage', JSON.stringify(sampleData));
+      this.setState({data_:sampleData});
+    }
   }
 
   componentDidUpdate() {
-
     localStorage.setItem('data-storage', JSON.stringify(this.state.data_));
-  
   }
 
     AddInformation = data1_ => {
+
+    data1_.id = Date.now();
     //1. Take a copy of the existing state ()
-    const data_ = {...this.state.data_};
-    //2. Add a new fish to that fishes variable
-    data_[`data1_${Date.now()}`] = data1_;
-    //3. Set the new fishes object to state
-      this.setState({
-        data_:data_
-      });
+    const data_ = [...this.state.data_];
+    //2. Add a info to that data variable
+    data_.push(data1_);
+    //3. Set the new data object to state and the local storage
+    localStorage.setItem('data-storage', JSON.stringify(data_));
+    this.setState({data_:data_});
   };
 
 
   render() {
 
-  	//const {data} = this.getData();
+  var data = this.state.data_ || [];
     return (
 
     	<Col md={12}>
