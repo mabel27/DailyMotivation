@@ -24,6 +24,9 @@ export function getQuote() {
     "Lo real es lo Presente",
     "How much you truly believe in something can be manifested only through what you are willing to risk for it.",
     "Don’t be afraid to give up the good and go for the great.",
+    "El Exito alimenta tu pasion ",
+    "Stay Close to people who feel like sunshine",
+    "Cada persona es una puerta a un mundo distinto"
   ];
 
 

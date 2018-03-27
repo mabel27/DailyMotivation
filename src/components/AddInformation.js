@@ -11,6 +11,15 @@ class AddInformation extends React.Component {
 		console.log(this.typeInput.value);
 		console.log(this.notesInput.value);
 
+    const data_ ={
+      name: this.nameInput.value,
+      image: this.imageInput.value,
+      type: this.typeInput.value,
+      notes: this.notesInput.value
+    };
+
+    this.props.AddInformation(data_);
+
 		//TODO add logic to add new Information
 
 	}
@@ -27,7 +36,7 @@ class AddInformation extends React.Component {
 
   			<FormGroup bsSize="small" >
     			<ControlLabel>Image</ControlLabel>
-      				<FormControl name="image" type="text" inputRef={(image) => { this.imageInput = image; }} placeholder="Image" />
+      				<FormControl className="mySubmit" name="image" type="file" inputRef={(image) => { this.imageInput = image; }} placeholder="Image" />
   			</FormGroup>
 
   			<FormGroup bsSize="small">

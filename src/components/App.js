@@ -13,11 +13,11 @@ class App extends React.Component {
   		data_ : {},
   	}
 
-    AddInformation = information => {
+    AddInformation = data1_ => {
     //1. Take a copy of the existing state ()
     const data_ = {...this.state.data_};
     //2. Add a new fish to that fishes variable
-    data_[`id${Date.now()}`] = data_;
+    data_[`data1_${Date.now()}`] = data1_;
     //3. Set the new fishes object to state
       this.setState({
         data_:data_
