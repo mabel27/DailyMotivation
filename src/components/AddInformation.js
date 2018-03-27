@@ -2,49 +2,37 @@ import React from 'react';
 import {FormControl, FormGroup, Button, Form, ControlLabel, Col} from 'react-bootstrap';
 
 class AddInformation extends React.Component {
+	
+	addInfo(e){
+		e.preventDefault();
 
-/*
+		console.log(this.nameInput.value);
+		console.log(this.imageInput.value);
+		console.log(this.typeInput.value);
+		console.log(this.notesInput.value);
 
-  nameRef = React.createRef();
-  imageRef = React.createRef();
-  typeRef = React.createRef();
-  notesRef = React.createRef();
+		//TODO add logic to add new Information
 
-  addInfo = (event) => {
-  //1. Stop the form form submitting
-  event.preventDefault();
-  const information = {
-    name: this.nameRef.value.value,
-    image: this.imageRef.value.value,
-    type: this.typeRef.value.value,
-    notes: this.notesRef.value.value,
-  };
-  this.props.addInfo(information);
-  //refresh the form
-  event.currentTarget.reset();
-
-  };
-
-  */
+	}
 
 	render (){
 		return(
       <Col md={12}>
-		 <Form horizontal className="myForm" onSubmit={this.addInfo}>
+		 <Form horizontal className="myForm" onSubmit={this.addInfo.bind(this)}>
 		  <p className="addInfo"><span className="p">W</span>hat inspired you today<span className="p">?</span></p>
   			<FormGroup  bssize="small" >
     			<ControlLabel>Name</ControlLabel>
-      			<FormControl name="name" ref={this.nameRef} type="text" placeholder="Name" />
+      			<FormControl name="name" inputRef={(name) => { this.nameInput = name; }} type="text" placeholder="Name" />
   			</FormGroup>
 
   			<FormGroup bsSize="small" >
     			<ControlLabel>Image</ControlLabel>
-      				<FormControl name="image" type="text" ref={this.imageRef} placeholder="Image" />
+      				<FormControl name="image" type="text" inputRef={(image) => { this.imageInput = image; }} placeholder="Image" />
   			</FormGroup>
 
   			<FormGroup bsSize="small">
       			<ControlLabel>Type</ControlLabel>
-      				<FormControl name="type" componentClass="select" ref={this.typeRef} placeholder="Type">
+      				<FormControl name="type" componentClass="select" inputRef={(type) => { this.typeInput = type; }} placeholder="Type">
       					<option value="">Select</option>
         				<option value="picture">Picture</option>
         				<option value="link">Link</option>
@@ -54,7 +42,7 @@ class AddInformation extends React.Component {
 
    			<FormGroup cbsSize="small">
       			<ControlLabel>Notes</ControlLabel>
-      			<FormControl name="notes" componentClass="textarea" ref={this.notesRef} placeholder= "Notes" />
+      			<FormControl name="notes" componentClass="textarea" inputRef={(notes) => { this.notesInput = notes; }} placeholder= "Notes" />
     		</FormGroup>
 
     		<FormGroup bsSize="small" className="pBox">

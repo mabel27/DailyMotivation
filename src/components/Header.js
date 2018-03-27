@@ -1,5 +1,5 @@
 import React from 'react';
-import { swing, bounceInDown, pulse } from 'react-animations';
+import {bounceInDown, pulse } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 import { Link } from 'react-router-dom';
 import {Col} from  'react-bootstrap';
@@ -8,7 +8,7 @@ import '../style.css';
 
 const styles = {
   pulse: {
-    animation: 'x 5s infinite',
+    animation: 'x 3s infinite',
     animationName: Radium.keyframes(pulse, 'pulse')
   },
 
