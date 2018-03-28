@@ -5,7 +5,6 @@ import AddInformation from './AddInformation';
 import Information from './Information';
 import sampleData from '../sampleData';
 
-
 class App extends React.Component {
 
 	state = {
@@ -13,41 +12,35 @@ class App extends React.Component {
   	}
 
   componentDidMount() {
+   		 	const storageData = JSON.parse(localStorage.getItem('data-storage'));
+		    if (storageData) {
+		      this.setState({data_:storageData});
+		    }else
+		    {
+		      localStorage.setItem('data-storage', JSON.stringify(sampleData));
+		      this.setState({data_:sampleData});
+		    }
+  	}
 
-    const storageData = JSON.parse(localStorage.getItem('data-storage'));
-
-    if (storageData) {
-      this.setState({data_:storageData});
-    }else
-
-    {
-      localStorage.setItem('data-storage', JSON.stringify(sampleData));
-      this.setState({data_:sampleData});
-    }
-  }
-
-  componentDidUpdate() {
-    localStorage.setItem('data-storage', JSON.stringify(this.state.data_));
-  }
+  	componentDidUpdate() {
+    		localStorage.setItem('data-storage', JSON.stringify(this.state.data_));
+  	}
 
     AddInformation = data1_ => {
-
-    data1_.id = Date.now();
-    //1. Take a copy of the existing state ()
-    const data_ = [...this.state.data_];
-    //2. Add a info to that data variable
-    data_.push(data1_);
-    //3. Set the new data object to state and the local storage
-    localStorage.setItem('data-storage', JSON.stringify(data_));
-    this.setState({data_:data_});
+		    data1_.id = Date.now();
+		    //1. Take a copy of the existing state ()
+		    const data_ = [...this.state.data_];
+		    //2. Add a info to that data variable
+		    data_.push(data1_);
+		    //3. Set the new data object to state and the local storage
+		    localStorage.setItem('data-storage', JSON.stringify(data_));
+		    this.setState({data_:data_});
   };
-
 
   render() {
 
   var data = this.state.data_ || [];
     return (
-
     	<Col md={12}>
 	      	<Welcome tagline="Today Is" />
 	      	<Col md={12}>

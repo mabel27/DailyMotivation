@@ -1,4 +1,3 @@
-// TODO Add ID to each one
 const data = [
 	{
 		id: 1,
@@ -73,6 +72,31 @@ const data = [
 		image: "/images/makeItHappen.jpg",
 		type: "Quote",
 		notes: "Make it Happen"
+	},
+
+
+	{
+		id: 10,
+		name: "React Advance",
+		image: "/images/react.png",
+		type: "Reminder",
+		notes: "Start Learning Redux"
+	},
+
+	{
+		id: 11,
+		name: "Buy the Cake",
+		image: "/images/cake.JPG",
+		type: "Reminder",
+		notes: "Birthday Tonight"
+	},
+
+	{
+		id: 12,
+		name: "Go to the bank",
+		image: "/images/bank.png",
+		type: "Reminder",
+		notes: "Ask for the new backing account"
 	}
 ];
 

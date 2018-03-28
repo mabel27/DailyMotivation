@@ -1,10 +1,3 @@
-export function formatPrice(cents) {
-  return (cents / 100).toLocaleString("en-US", {
-    style: "currency",
-    currency: "USD"
-  });
-}
-
 export function rando(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
@@ -28,7 +21,6 @@ export function getQuote() {
     "Stay Close to people who feel like sunshine",
     "Cada persona es una puerta a un mundo distinto"
   ];
-
 
   return `${rando(quotes)}`;
 }
