@@ -22,11 +22,9 @@ class Header extends React.Component {
 	render ()
 	{
 	return (
-		<div  className="myBackground container-fluid" >
-		
-        <StyleRoot>
-        <Col md={12}><div className="confetti"><img src="/images/confetti2.png" style={styles.pulse} alt="confetti"/></div></Col>
-        <Col md={12} >
+       <StyleRoot>
+        
+        <Col md={12} sm={6} >
 	          	<h1 className="header" style={styles.bounceInDown} >
 	          	Your <span className="p" >P</span>otential is
 	          		 <span className="header1"  >
@@ -34,16 +32,25 @@ class Header extends React.Component {
 	          	</h1>
 	          	<h2  className="quoteOfTheDay">{getQuote()}</h2>
 		</Col>
+
 	    <Col md={12} >
+
+	    <Col md={12} sm={6} >
+
 	      		<ul >
 		          	<li className="liStart"  >
 		          		<Link className="start" to='/App'>Start!</Link>
 		          	</li>
+
 		         </ul>
 		</Col>
 		<Col md={12}><img src="/images/confetti3.png" style={styles.pulse} alt="confetti"/></Col>
 		</StyleRoot>
 		</div>
+
+		          </ul>
+		</Col>
+	</StyleRoot>
 		);
 	}
 }
