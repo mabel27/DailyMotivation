@@ -33,8 +33,6 @@ class Header extends React.Component {
 	          	<h2  className="quoteOfTheDay">{getQuote()}</h2>
 		</Col>
 
-	    <Col md={12} >
-
 	    <Col md={12} sm={6} >
 
 	      		<ul >
@@ -44,12 +42,7 @@ class Header extends React.Component {
 
 		         </ul>
 		</Col>
-		<Col md={12}><img src="/images/confetti3.png" style={styles.pulse} alt="confetti"/></Col>
-		</StyleRoot>
-		</div>
-
-		          </ul>
-		</Col>
+	
 	</StyleRoot>
 		);
 	}
